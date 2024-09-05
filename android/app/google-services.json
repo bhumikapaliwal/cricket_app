@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "675821767908",
+    "firebase_url": "https://myfirebaseproject-344ec-default-rtdb.firebaseio.com",
+    "project_id": "myfirebaseproject-344ec",
+    "storage_bucket": "myfirebaseproject-344ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675821767908:android:f23b99bb36e6bf6a60b0f1",
+        "android_client_info": {
+          "package_name": "com.example.cricketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675821767908-t6tiq3bc13mh3os936os9l8vgjhakcjf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cricketapp",
+            "certificate_hash": "0cd99d752a46db685e455304860978ba3ed7c671"
+          }
+        },
+        {
+          "client_id": "675821767908-916gct64sfkan9b3dacr23kn0tm55snu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChhXqRuTgxc_PgYYIsdhw_hWNZVvKfZU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675821767908-916gct64sfkan9b3dacr23kn0tm55snu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "675821767908-8q5n33qf6a9nj1i3oioi53ulj112sbv2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.myproject"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:675821767908:android:37b61778fb5b77a260b0f1",
+        "android_client_info": {
+          "package_name": "com.example.myproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "675821767908-8p2bm6b4u0n5olesuc5khdve7nh1ocbv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.myproject",
+            "certificate_hash": "0cd99d752a46db685e455304860978ba3ed7c671"
+          }
+        },
+        {
+          "client_id": "675821767908-916gct64sfkan9b3dacr23kn0tm55snu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChhXqRuTgxc_PgYYIsdhw_hWNZVvKfZU4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "675821767908-916gct64sfkan9b3dacr23kn0tm55snu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "675821767908-8q5n33qf6a9nj1i3oioi53ulj112sbv2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.myproject"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
