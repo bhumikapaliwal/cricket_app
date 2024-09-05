@@ -47,7 +47,7 @@
 	<true/>
 <!-- Google Maps API Key -->
     <key>GMSApiKey</key>
-    <string>AIzaSyA1LfSgvupl81pGTHKsLkRA2pB8w5ndWV0</string>
+    <string>***********************</string>
 
     <!-- Location Services Usage Description -->
         <key>NSLocationWhenInUseUsageDescription</key>
