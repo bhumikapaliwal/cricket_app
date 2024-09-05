@@ -43,7 +43,6 @@ class _TeamScoreFormState extends State<TeamScoreForm> with SingleTickerProvider
       if (matchDoc.exists) {
         final matchData = matchDoc.data() as Map<String, dynamic>;
 
-        // Extract match details
         final matchPlace = matchData['matchPlace'] as String;
         final matchDate = matchData['matchDate'] as String;
         final teamAId = matchData['teamAId'] as String;
@@ -52,15 +51,12 @@ class _TeamScoreFormState extends State<TeamScoreForm> with SingleTickerProvider
         final teamAScoreStatus = matchData['teamA_scoreStatus'] as String;
         final teamBScoreStatus = matchData['teamB_scoreStatus'] as String;
 
-        // Extract player data for both teams
         final teamAPlayersData = matchData['teamA'] as List<dynamic>;
         final teamBPlayersData = matchData['teamB'] as List<dynamic>;
 
-        // Convert player data to Player objects
         final teamAPlayers = teamAPlayersData.map((playerData) => Player.fromMap(playerData)).toList();
         final teamBPlayers = teamBPlayersData.map((playerData) => Player.fromMap(playerData)).toList();
 
-        // Create Team objects (if needed)
         _teamA = Team(
           name: teamAId,
           players: teamAPlayers,
@@ -71,7 +67,6 @@ class _TeamScoreFormState extends State<TeamScoreForm> with SingleTickerProvider
           players: teamBPlayers,
         );
 
-        // Update state with the fetched data
         setState(() {});
       } else {
         print('Match not found with the ID ${widget.matchId}');

@@ -58,7 +58,6 @@ class _CreateMatchScreenState extends State<CreateMatchScreen> {
             (teamBData['players'] as List<dynamic>).map((playerData) => Player.fromMap(playerData)),
           );
 
-          // Ensure players' stats are initialized to zero (this is optional if default values are used)
           teamAPlayers = teamAPlayers.map((player) {
             return Player(
               name: player.name,

@@ -156,13 +156,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                       crossAxisAlignment: CrossAxisAlignment.center,
                                       children: [
                                         TextButton(onPressed: () {
-                                          Navigator.push(
-                                            context,
-                                            MaterialPageRoute(
-                                                builder: (context) => AddScoresScreen(teamName: teamData['name'])
-                                              // AddScoresScreen(matchId: match.id, teamAId: match['teamAId'], teamBId: 'teamBId',),
-                                            ),
-                                          );
+                                          // Navigator.push(
+                                          //   context,
+                                          //   MaterialPageRoute(
+                                          //       builder: (context) => AddScoresScreen(teamName: teamData['name'])
+                                          //     // AddScoresScreen(matchId: match.id, teamAId: match['teamAId'], teamBId: 'teamBId',),
+                                          //   ),
+                                          // );
                                         },style: ButtonStyle(
                                           padding: MaterialStateProperty.all(EdgeInsets.zero),
                                         ),

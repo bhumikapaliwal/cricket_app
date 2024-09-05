@@ -38,15 +38,14 @@ class _MatchDetailState extends State<MatchDetail> {
         final matchData = matchDoc.data()!;
         final String matchDate = matchData['matchDate'];
         final String matchPlace = matchData['matchPlace'];
-        final String teamAId = matchData['teamAId']; // Assuming this is a string
-        final String teamBId = matchData['teamBId']; // Assuming this is a string
+        final String teamAId = matchData['teamAId'];
+        final String teamBId = matchData['teamBId'];
 
         print('Match Data: $matchData');
 
         final prefs = await SharedPreferences.getInstance();
         _locationUrl = 'https://www.google.com/maps/search/?api=1&query=${Uri.encodeComponent(matchPlace)}';
 
-        // Fetch team details from Firestore using teamAId and teamBId
         final teamADoc = await FirebaseFirestore.instance.collection('teams').doc(teamAId).get();
         final teamBDoc = await FirebaseFirestore.instance.collection('teams').doc(teamBId).get();
 

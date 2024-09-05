@@ -69,30 +69,22 @@ class MatchCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final data = match.data() as Map<String, dynamic>;
-
-    // Check if teamAId and teamBId are String or Map<String, dynamic>
     String teamAName;
     String teamBName;
 
     if (data['teamAId'] is String) {
-      // If teamAId is a String, use it as the team name
       teamAName = data['teamAId'] as String;
     } else if (data['teamAId'] is Map<String, dynamic>) {
-      // If teamAId is a Map, extract the 'name' field
       teamAName = (data['teamAId'] as Map<String, dynamic>)['name'] ?? 'Unknown Team A';
     } else {
-      // Fallback in case neither condition is met
       teamAName = 'Unknown Team A';
     }
 
     if (data['teamBId'] is String) {
-      // If teamBId is a String, use it as the team name
       teamBName = data['teamBId'] as String;
     } else if (data['teamBId'] is Map<String, dynamic>) {
-      // If teamBId is a Map, extract the 'name' field
       teamBName = (data['teamBId'] as Map<String, dynamic>)['name'] ?? 'Unknown Team B';
     } else {
-      // Fallback in case neither condition is met
       teamBName = 'Unknown Team B';
     }
 
@@ -123,12 +115,12 @@ class MatchCard extends StatelessWidget {
                   TeamButton(
                     teamName: teamAName,
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AddScoresScreen(teamName: teamAName),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => AddScoresScreen(teamName: teamAName),
+                      //   ),
+                      // );
                     },
                   ),
                   SizedBox(width: 25),
@@ -144,12 +136,12 @@ class MatchCard extends StatelessWidget {
                   TeamButton(
                     teamName: teamBName,
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => AddScoresScreen(teamName: teamBName),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => AddScoresScreen(teamName: teamBName),
+                      //   ),
+                      // );
                     },
                   ),
                 ],
@@ -239,10 +231,8 @@ class MatchDetailsTile extends StatelessWidget {
   }
 
   Future<void> _handleMatchTap(BuildContext context, QueryDocumentSnapshot match) async {
-    // Access match data as a map
     final data = match.data() as Map<String, dynamic>;
 
-    // Safely handle teamAId and teamBId based on their types
     final teamAId = data['teamAId'] is String
         ? data['teamAId'] as String
         : (data['teamAId'] as Map<String, dynamic>)['name'] as String?;

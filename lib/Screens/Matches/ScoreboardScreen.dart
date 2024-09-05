@@ -42,36 +42,30 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
       if (matchDoc.exists) {
         final matchData = matchDoc.data() as Map<String, dynamic>;
 
-        print('Match Data: $matchData');  // Debug print
-
-        // Fetch teamA and teamB data
+        // print('Match Data: $matchData');
         final teamAData = matchData['teamA'] as Map<String, dynamic>;
         final teamBData = matchData['teamB'] as Map<String, dynamic>;
 
-        print('Team A Data: $teamAData');  // Debug print
-        print('Team B Data: $teamBData');  // Debug print
+        // print('Team A Data: $teamAData');
+        // print('Team B Data: $teamBData');
 
-        // Extract players from teamA
         final teamAPlayers = (teamAData['players'] as List<dynamic>)
             .map((playerData) => Player.fromMap(playerData as Map<String, dynamic>))
             .toList();
 
-        // Extract players from teamB
         final teamBPlayers = (teamBData['players'] as List<dynamic>)
             .map((playerData) => Player.fromMap(playerData as Map<String, dynamic>))
             .toList();
 
-        // Create Team objects
         _teamA = Team(
-          name: widget.teamAId,  // Assuming the ID can be used as the name or fetch name from Firestore
+          name: widget.teamAId,
           players: teamAPlayers,
         );
         _teamB = Team(
-          name: widget.teamBId,  // Assuming the ID can be used as the name or fetch name from Firestore
+          name: widget.teamBId,
           players: teamBPlayers,
         );
 
-        // Calculate total scores
         _totalScoreA = _calculateTotalScore(teamAPlayers);
         _totalScoreB = _calculateTotalScore(teamBPlayers);
 
@@ -88,11 +82,9 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
     }
   }
 
-  // Calculate total score based on player runs
   int _calculateTotalScore(List<Player> players) {
     int totalScore = 0;
 
-    // Sum up the runs of all players in the list
     for (var player in players) {
       totalScore += player.runs;
     }
@@ -118,7 +110,7 @@ class _ScoreboardScreenState extends State<ScoreboardScreen> {
     } else if (_totalScoreB > _totalScoreA) {
       return isTeamA ? Colors.red : Colors.green;
     } else {
-      return Colors.grey; // Tie case
+      return Colors.grey;
     }
   }
 
